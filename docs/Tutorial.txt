@@ -1,0 +1,25 @@
+Finger Tracking Tutorial
+
+1. Open the FingerTracker.jar file.
+	A window will open displaying the Finger ID Map.
+2. Select "File" with the mouse.
+	A box will appear below your cursor with file options.
+3. Select "Open"
+	A box will appear with files and folders listed.
+4. Select a video to process and select "open."
+	A new box will appear with the first frame of the video appearing on the 
+	upper portion and the controls in the lower portion.
+5. Make finger selections:
+	a) Finger 1 is ready to be selected by default.
+	b) Click on the video to identify location of that finger.  
+	c) If selecting more than one finger, Change finger number by 
+	   selecting the down arrow in the "Select Fingers" section and 
+	   highlighting the finger number you wish to mark. 
+	d) repeat b and c as many times as necessary. (optional)
+6. Change Threshold by changing the number labeled "Threshold." (optional)
+7. Choose to update the tracking color every frame or keep the color the 
+   same as the first frame by selecting a circles next to the respective options.
+8. When you are satisfied with the finger labeling and the options selected, 
+   click on "Go."
+9. When the video is finished processing, click "Play" to review the results. 
+   The output will be saved to an xml file in the data folder.

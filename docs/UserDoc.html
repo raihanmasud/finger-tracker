@@ -1,0 +1,285 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Finger Tracker User Documentation</title>
+
+<style type="text/css">
+body {
+	text-align:center;
+	margin: 0px;
+	padding: 10px 0px 0px;
+	font-family:Arial,Helvetica,serif;
+	font-size:12px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:18px;
+}
+
+h1, h2, h3, h4, h5, h6, caption {
+	font-family:Arial,Helvetica,serif;
+}
+
+h1 {
+	font-size:1.65em;
+}
+
+#container {
+	margin: auto;
+	padding: 0px;
+}
+
+#header	{
+	text-align: left;
+}
+
+#header-w {
+	font-family:Verdana,sans-serif;
+	background: #003E0F;
+	padding-left: 13px;
+	padding-top: 12px;
+}
+
+#header div.header-custom-banner {
+	text-align: left;
+}
+
+#header div.header-custom-banner {
+	color: #FDD017;
+	font-size: 2.1em;
+	margin:5px 0 0;
+	padding:5px 0 15px;
+}
+
+#header a:link, #header a:visited {
+	color: #FDD017;
+	text-decoration: none;
+}
+
+h1.header-w {
+	color:#347C17;
+	padding-bottom:15px;
+}
+
+h1 div#space-role {
+	color:#FDD017;
+	float:left;
+	font-size:small;
+	font-weight:normal;
+	text-align:right;
+	text-transform:none;
+	white-space:nowrap;
+}
+
+#doc-name {
+	border-bottom:3px solid #C6D3E1;
+	padding-bottom:5px;
+	width:100%;
+}
+
+#data {
+	text-align: left;
+	margin: 1.5em 3em 3em;
+}
+
+p {
+	margin-bottom:0.75em;
+}
+
+blockquote {
+	font-style:italic;
+	margin-bottom:0.75em;
+	margin-left:3em;
+}
+
+a:link, a:visited {
+	color:#15478C;
+	padding:1px 0;
+	text-decoration:underline;
+}
+
+code {
+	background:#F7F7F7 none repeat scroll 0 0;
+	border:1px solid #DCDCDC;
+	padding:0.1em 0.375em;
+}
+
+#doclogo {
+	margin-left: 100px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+table {
+	border-bottom:1px solid #D4DCE8;
+	border-collapse:collapse;
+	border-top:1px solid #D4DCE8;
+	margin-bottom:0.75em;
+	width:100%;
+}
+
+table th {
+	background:#EAF3FA none repeat scroll 0 0;
+	color:#333333;
+	font-size:1em;
+	font-weight:bold;
+	height:21px;
+	padding:0.2em 0.5em;
+	text-align:left;
+}
+
+table td {
+	border-bottom:1px solid #EEEEEE;
+	padding:0.375em 0.5em;
+	text-align:left;
+	vertical-align:top;
+}
+
+pre {
+	background:#F8F8F8 none repeat scroll 0 0;
+	border:1px dashed #DCDCDC;
+	margin:1.25em 0;
+	overflow:auto;
+	padding:0.375em;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+
+	<div id="header">
+		<div id="header-w">
+		   <div class="header-custom-banner clear-float"><a class="header-text" href="http://www.cs.uoregon.edu">CIS 423/510 Project</a></div>
+			<h1 class="header-w clear-float">
+			  <span>Analysis of Tactile Map Reading</span>
+			  <span> - <i>Documentation</i></span>
+			</h1>
+		</div>
+	</div>
+
+	<div id="data">
+
+		<div id="doc-name">
+			<h2>Finger Tracker User Documentation</h2>
+		</div>
+
+		<p>&nbsp;<strong>Project Description</strong></p>
+
+<p>Analysis of Tactile Map Reading (ATMR) is a project which helps the scientists to analyses the blind people's behaviors of using haptics map. As a sub-project, Visual Finger Tracking (VFT) extracts the position information of each finger tips from the experimental videos of blind people using haptics map. These important data can be used in the data analysis part of ATMR.</p>
+
+<p>For specific, the following features are included:</p>
+
+<ul>
+<li>Load Videos: Loads uncompressed AVI videos and makes stacks of frames.</li>
+<li>Advanced User Interface: Lets the user to control which finger(s) to track.</li>
+<li>Find the Positions of Finger Tips : Finds the centroids of the fingers with specific color patches.</li>
+<li>Output XML File: Outputs the extracted information like of centroids, time stamps, finger IDs.</li>
+</ul>
+
+<p>Visual Finger Tracking project group combines five students: Peter Maricle, Fan Wang, Kristy Tomas, Raihan Masud and Kyle Vessey. This is a project for UO CIS course 423/510 Spring 2009.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Running Requirement</strong></p>
+
+<p>CPU: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Intel Pentium III (or better) <br />RAM:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 128MB <br />Disk Space: &nbsp;&nbsp;&nbsp;&nbsp;100MB free storage space<br />OS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Windows XP, Mac OS<br />Software: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JRE 1.6 (or higher)</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Getting Start</strong></p>
+
+<p style="PADDING-LEFT: 30px">1. Open the FingerTracker.jar file.<br />&nbsp;&nbsp;&nbsp;&nbsp; A window will open displaying the Finger ID Map.<br />2. Select "File" with the mouse.<br />&nbsp;&nbsp;&nbsp; A box will appear below your curser with file options.<br /><span style="background-color: #ffffff;">3. Select "Open"<br />&nbsp;&nbsp;&nbsp; A box will appear with files and folders listed.<br />4. Select a video to process and select "open."<br />&nbsp;&nbsp;&nbsp; A new box will appear with the first frame of the video appearing on the&nbsp;upper portion and the controls in the lower portion.<br />5. Make finger selections:<br />&nbsp;a) Finger 1 is ready to be selected by default.<br />&nbsp;b) Click on the video to identify location of that finger.&nbsp; <br />&nbsp;c) If selecting more than one finger, Change finger number by&nbsp;selecting the down arrow in the "Select Fingers" section and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; highlighting the finger number you wish to mark. <br />&nbsp;d) repeat b and c as many times as neccessary. (optional)<br />6. Change Threshold by changing the number labled "Threshold." (optional)<br />7. Choose to update the tracking color every frame or keep the color the&nbsp;same as the first frame by selecting a circles next to the respective options.<br />8. When you are satisfied with the finger labeling and the options selected,&nbsp;click on "Go."<br />9. When the video is finished processing, click "Play" to review the results.&nbsp;</span></p>
+
+<p><strong><span style="background-color: #ffffff;">Video Format Guide </span></strong></p>
+
+		<p><span style="background-color: #ffff00;">
+		<span style="background-color: #ffffff;">1.Video Testing<br />Testing was used with a tripod positioned directly over the map user.&nbsp; Note: The program will not rectify coordinates in the case of in the case of different perspectives - the view of the camera should fit best with the map view.&nbsp; Lighting is also an important issue to take note of.&nbsp; Shadows and light changes during the video taking will change the RGB values being tracked during processing.&nbsp; In terms of color selection,&nbsp; A wide range of distinct colors is most successful for capturing up to 10 inputs.&nbsp; Green colors seemed to be most accurate throughout all testing and is recommended for smaller amounts of input.<br />
+		<br />Visit the team wiki for more info!<br />http://www.assembla.com/wiki/show/c5yc7ahA4r3QEDeJe5aVNr<br />
+		<br /><span style="background-color: #ffffff;">2. Format</span></span></span></p>
+
+<p><span style="background-color: #ffff00;"><span style="background-color: #ffffff;"><span style="background-color: #ffffff;">Input Format for </span></span><a href="/wiki/show/atmrVisTeam/FingerTracker" title="FingerTracker"><span style="background-color: #ffffff;">FingerTracker</span></a><span style="background-color: #ffffff;"><span style="background-color: #ffffff;"> : uncompressed AVI</span><br />&nbsp;&nbsp;&nbsp; *mpeg compressed, *png compressed<br /><br />Formats we used in testing :&nbsp; MOV, AVI, WMV, MPEG<br /><br />*these compressions were used when wirking with ImageJ<br /><br /><em>ImageJ</em><br /><br />ImageJ has two classes related to AVI video formats (AVI_reader and AVI_writer) that reads in uncompressed AVI files, but also has the capability to write out uncompressed, mpeg, or png compressed AVI files.&nbsp; Since we are using the ImageJ package in our program, our program only reads in these formats as well.<br /><br />http://www.media-convert.com/<br /><br />Media Convert is a free, online video conversion website that supports many conversion options and formats and was used early on in the project's life.&nbsp; This option is not viable if videos and information is to be kept private though.<br /><br /><em>iMovie</em><br /><br />iMovie was used for converting videos on the Mac to uncompressed AVI from the video tests with the Tablet Team.&nbsp; iMovie is a proprietary software that is bundled with most new Macs and uses the Quicktime codecs for video conversion (ImageJ documentation suggests using Quicktime Pro for converting).&nbsp; In our experience, iMovie is less than desirable on formats and seems slower at converting videos.<br /><br /><em>Any Video Converter</em><br /><br />This was a Windows solution that worked well and is freeware, with a payed version offered with more functionality.&nbsp; In particular, it was used to convert webcam videos from Windows Media Format (.wmv) to AVI.&nbsp; It can also deal with .mov, .mpeg and many other formats.<br /><br /><em>ffmpeg<br /></em><br />This converter comes with the Fink distribution and Andrew Munkres, from the tablet team, was able to convert webcam videos with it.&nbsp; It is a viable solution in a Linux-type environment but was not explored by our team.&nbsp; A Mac version was tried but is not up-to-date with the Fink version.</span></span></p>
+
+<p><span style="background-color: #ffff00;"></span>&nbsp;</p>
+
+<p><strong>Advanced</strong> <strong>Program Running Guide </strong></p>
+
+<p><u>Main Window</u></p>
+
+<p style="PADDING-LEFT: 30px">After the user start the program, there is a main window like below.</p>
+
+<p style="PADDING-LEFT: 30px">&nbsp;<img border="0" src="pics/mainWindow.JPG" width="824" height="567"></p>
+
+<p style="PADDING-LEFT: 30px">In the window, there is an image shown about the finger IDs. This standard is the same among all ATMR program. On the right, there is console to show the info about the program. Initially, the simple instruction to use the program is presented. &nbsp;During the processing, it shows the data generated.</p>
+
+<p style="PADDING-LEFT: 30px">In the control bar above, users can use File-&gt;open to process one video, or File-&gt;process all to process all video under the folder&nbsp; ./res/videos. To exit the program, click File-&gt;Exit.</p>
+
+<p style="PADDING-LEFT: 30px">The user can personalize the view of the main window using the options under "View" in control bar.</p>
+
+<p style="PADDING-LEFT: 30px">To get help, press Help. And there are technical documentation and user guide. Text and video tutorial is available.</p>
+
+<p><u>Tracking Window</u></p>
+
+<p style="PADDING-LEFT: 30px">After the user opens a video, the tracking window is opened.</p>
+
+<p style="PADDING-LEFT: 30px">
+<img border="0" src="pics/trackingWindow.JPG" width="735" height="670"><br />The first frame of the video is presented default. &nbsp;If the first frame can not be use to assign colors (for instance no finger in this frame), use "Play" button to find a capable one. Assign the colors and IDs of the fingers. If the user changes the mind about the color been assigned, he can use "Delete" to delete it.</p>
+
+<p style="PADDING-LEFT: 30px">Notice that the program only tracks the frame which the user used to the last frame in the video. That is, if an user uses frame 10 to assign which fingers to track, the program only search for frame 10 to the last one.</p>
+
+<p style="PADDING-LEFT: 30px">For advanced user, there is a setting section more options. The program searches for the pixels in current frame with the color similar with the target color and find the center point these pixels. This center point is finger's position of this frame.</p>
+
+<p style="PADDING-LEFT: 30px">Threshold means the range of accepted color. Searching for exactly the same color is unpractical. The color of the same spot will change due to the light or the condition of the camera in each frame. The program uses threshold to set a range of accepted colors. For instance, if the user set the threshold as 20, and the target color is (100, 100, 100), the program will accept any pixel with color value between (80, 80, 80) and (120, 120, 120). If the threshold is too large, the position may not be accurate; while if it's too small, the possibility of "position can not be found" will rise.</p>
+
+<p style="PADDING-LEFT: 30px">Another option is using the color of the last frame's position or using the initial color of the user assigned as target color. The former one corresponds with "Update Tracking Color" in the window and the latter one corresponds with "Do Not Update Tracking Color". The advantage of using the color of the last frame's position is if the color in the video changes dramatically, the program can produce the best result. Using another method will work best when the finger moves outside the video in some frames.</p>
+
+<p style="PADDING-LEFT: 30px">After all settings are done, press "Go", and the processing will start. Wait a while, after the processing is finished, press "Play" to see the result.</p>
+
+<p><u>XML File</u></p>
+
+<p style="PADDING-LEFT: 30px">Once the processing of one frame is over, the program will write one line of data for each tracked finger into the result xml file. The format of the xml file is like below. In the root element, the StartDateTime is the time when the processing begins. Each element "event" contains the position of one finger in the frame. It has four attributes: FingerID, time, and x-y dimensions. The time means the time delay in ms of each frame.</p>
+
+<p style="PADDING-LEFT: 60px">&lt;?xml version=<em>"1.0"</em> encoding=<em>"UTF-8"</em>?&gt;</p>
+
+<p style="PADDING-LEFT: 60px">&lt;coordStream <a href="/wiki/show/atmrVisTeam/StartDateTime" title="StartDateTime">StartDateTime</a>=<em>"2009-05-25T10:24:10.953-0700"</em>&gt;</p>
+
+<p style="PADDING-LEFT: 60px">&nbsp; &lt;event fingerID=<em>"1"</em> time=<em>"142.857"</em> X=<em>"521"</em> Y=<em>"289"</em> /&gt;</p>
+
+<p style="PADDING-LEFT: 60px">&nbsp; &lt;event fingerID=<em>"6"</em> time=<em>"142.857"</em> X=<em>"519"</em> Y=<em>"225"</em> /&gt;</p>
+
+<p style="PADDING-LEFT: 60px">&nbsp;&nbsp; ...</p>
+
+<p style="PADDING-LEFT: 60px">&nbsp;&lt;/coordStream&gt;</p>
+
+<p style="PADDING-LEFT: 30px">Notice that only one xml will be saved for one video processed. If the user processes one video for multiple times, only the latest result will can be found.&nbsp; If the user processed two different videos with same name, the result of the earlier processing will be overwritten.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Trouble Shooting</strong></p>
+
+<p style="padding-left: 30px;"><strong>Problem:</strong> Error when open a video.</p>
+
+		<p style="padding-left: 30px;">Solution: Make sure the video's format is 
+		<span style="text-decoration: underline;">uncompressed avi</span>. If it still doesn't work, let us know.</p>
+
+<p style="padding-left: 30px;"><strong>Problem:</strong> Unable to find the correct centeroids of finger tips.</p>
+
+<p style="padding-left: 30px;">Solution:</p>
+
+		<blockquote>
+			<p style="padding-left: 30px;">1. Notice that the parameters should be filled in before open a video;</p>
+			<p style="padding-left: 30px;">2. Change threshold value and the option of whether update tracking color or not.</p>
+			<p style="padding-left: 30px;">3. If it still doesn't work, let us know.</p>
+		</blockquote>
+
+	</div>
+
+</div>
+</body>
+</html>

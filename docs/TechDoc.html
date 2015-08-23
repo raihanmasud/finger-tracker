@@ -1,0 +1,310 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Finger Tracker Technical Documentation</title>
+
+<style type="text/css">
+body {
+	text-align:center;
+	margin: 0px;
+	padding: 10px 0px 0px;
+	font-family:Arial,Helvetica,serif;
+	font-size:12px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:18px;
+}
+
+h1, h2, h3, h4, h5, h6, caption {
+	font-family:Arial,Helvetica,serif;
+}
+
+h1 {
+	font-size:1.65em;
+}
+
+#container {
+	margin: auto;
+	padding: 0px;
+}
+
+#header	{
+	text-align: left;
+}
+
+#header-w {
+	font-family:Verdana,sans-serif;
+	background: #003E0F;
+	padding-left: 13px;
+	padding-top: 12px;
+}
+
+#header div.header-custom-banner {
+	text-align: left;
+}
+
+#header div.header-custom-banner {
+	color: #FDD017;
+	font-size: 2.1em;
+	margin:5px 0 0;
+	padding:5px 0 15px;
+}
+
+#header a:link, #header a:visited {
+	color: #FDD017;
+	text-decoration: none;
+}
+
+h1.header-w {
+	color:#347C17;
+	padding-bottom:15px;
+}
+
+h1 div#space-role {
+	color:#FDD017;
+	float:left;
+	font-size:small;
+	font-weight:normal;
+	text-align:right;
+	text-transform:none;
+	white-space:nowrap;
+}
+
+#doc-name {
+	border-bottom:3px solid #C6D3E1;
+	padding-bottom:5px;
+	width:100%;
+}
+
+#data {
+	text-align: left;
+	margin: 1.5em 3em 3em;
+}
+
+p {
+	margin-bottom:0.75em;
+}
+
+blockquote {
+	font-style:italic;
+	margin-bottom:0.75em;
+	margin-left:3em;
+}
+
+a:link, a:visited {
+	color:#15478C;
+	padding:1px 0;
+	text-decoration:underline;
+}
+
+code {
+	background:#F7F7F7 none repeat scroll 0 0;
+	border:1px solid #DCDCDC;
+	padding:0.1em 0.375em;
+}
+
+#doclogo {
+	margin-left: 100px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+table {
+	border-bottom:1px solid #D4DCE8;
+	border-collapse:collapse;
+	border-top:1px solid #D4DCE8;
+	margin-bottom:0.75em;
+	width:100%;
+}
+
+table th {
+	background:#EAF3FA none repeat scroll 0 0;
+	color:#333333;
+	font-size:1em;
+	font-weight:bold;
+	height:21px;
+	padding:0.2em 0.5em;
+	text-align:left;
+}
+
+table td {
+	border-bottom:1px solid #EEEEEE;
+	padding:0.375em 0.5em;
+	text-align:left;
+	vertical-align:top;
+}
+
+pre {
+	background:#F8F8F8 none repeat scroll 0 0;
+	border:1px dashed #DCDCDC;
+	margin:1.25em 0;
+	overflow:auto;
+	padding:0.375em;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="container">
+
+	<div id="header">
+		<div id="header-w">
+		   <div class="header-custom-banner clear-float"><a class="header-text" href="http://www.cs.uoregon.edu">CIS 423/510 Project</a></div>
+			<h1 class="header-w clear-float">
+			  <span>Analysis of Tactile Map Reading</span>
+			  <span> - <i>Documentation</i></span>
+			</h1>
+		</div>
+	</div>
+
+	<div id="data">
+
+		<div id="doc-name">
+			<h2>Finger Tracker Technical Documentation</h2>
+		</div>
+
+		<p><b>&nbsp;</b><strong>Project Description</strong></p>
+
+<p>Analysis of Tactile Map Reading (ATMR) is a project which helps the scientists to analyses the blind people's behaviors of using haptics map. As a sub-project, Visual Finger Tracking extracts the position information of each finger tips from the experimental videos of blind people using haptics map. These important data can be used in the data analysis part of ATMR.</p>
+
+<p>For specific, the following features are included:</p>
+
+<ul type="disc">
+<li>Load videos: Loads uncompressed AVI videos and makes stacks of frames. </li>
+<li>Advanced user interface: Lets the user to control which finger(s) to track. </li>
+<li>Find the positions of finger tips in whole v: Finds the centroids of the fingers with specific color patches. </li>
+<li>Output result as xml file: Outputs the extracted information of centroids, time stamps, finger IDs. </li>
+</ul>
+
+<p>Visual Finger Tracking project group combines five students: Peter Maricle, Fan Wang, Kristy Tomas, Raihan Masud and Kyle Vessey. &nbsp;This is a class project for UO CIS course 423/510 Spring 2009.</p>
+
+<p>&nbsp;</p>
+		<p><strong>System Requirement</strong></p>
+
+<p>CPU: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Intel Pentium III (or better) <br />RAM:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 128MB <br />Disk Space: &nbsp;&nbsp;&nbsp;&nbsp;100MB free storage space<br />OS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Windows XP, Mac OS<br />Software: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JRE 1.6 (or higher)</p>
+
+<p>&nbsp;&nbsp;</p>
+		<p><strong>System Architecture and Design</strong></p>
+
+<p>The following diagram is the system architecture of Visual Finger Tracking:</p>
+
+<p><img border="0" src="pics/data-Flow.jpg" width="601" height="378"></p>
+
+<p>When the application begins to run, the main method in <a href="/wiki/show/atmrVisTeam/RunFingerTracker" title="RunFingerTracker">RunFingerTracker</a> is invoked. Uncompressed AVI file is read by AVI reader and stack of frames are created. Then the users need to assign which finger to track by click the frame. After that, <a href="/wiki/show/atmrVisTeam/FingerTracker" title="FingerTracker">FingerTracker</a> uses the color value to track the finger tips in all frames. After all frames are processed, a XML output file is generated to store all the extracted information.</p>
+
+<p>
+<p><span style="text-decoration: underline;"></span></p>
+<p><span style="text-decoration: underline;"><strong style="font-weight: 400">Loading Video</strong></span></p>
+<p>The program supports uncompressed AVI format.&nbsp;It uses ImageJ AVI plug-in and ImageStack library to load uncompressed AVI video and to create a stack of all frames. ImageJ is an open source library. Its documentation can be found at <a href="http://rsbweb.nih.gov/ij/docs/index.html">http://rsbweb.nih.gov/ij/docs/index.html</a>.</p>
+</p>
+
+<p>&nbsp;</p>
+
+<p><span style="text-decoration: underline; font-weight:400">User Interface</span></p>
+
+<p>The advanced UI of the program can let the users to select which fingers to track and assign the finger IDs to them. The advantage of letting the users to do so is the program can avoid the effect of variable lighting conditions of the video. The marked colors may change dramatically&nbsp;under different light. By doing this, the program can gain more flexibility.</p>
+
+<p>&nbsp;About the finger ID, the program follows the standard of ATMR group:</p>
+
+<p><img border="0" src="pics/fingerIndex.png" width="730" height="429"></p>
+
+<h3 id="3c7370616e207374796c653d22746578742d6465636f726174696f6e3a20756e6465726c696e653b223e3c7370616e207374796c653d22666f6e742d73697a653a20736d616c6c3b223e747261636b696e67266e6273703b66696e676572203c2f7370616e3e3c2f7370616e3e"><span style="text-decoration: underline;"></span></h3>
+
+<p><span style="text-decoration: underline; font-weight:400">Tracking&nbsp;Fingers </span>
+		</p>
+
+<p>Before talking about the algorithm, let make the definition of position. The program uses x-y dimentions to show the finger's position on video. For example, for a video with resolution of 640*480, the x-y dimensions for each frame are shown below. If the position of the finger can not be found, the program will return (-1,-1).</p>
+
+<p><img border="0" src="pics/XYDimensions.jpg" width="387" height="212"></p>
+
+<p>How to find the finger? The program searches for the pixels in current frame with the color similar with the target color and find the center point these pixels. This center point is finger's position of this frame.</p>
+
+<p>What color is used as target color? There are two options, using the color of the last frame's position or using the initial color of the user assigned. The advantage of using the color of the last frame's position is if the color in the video changes dramatically, the program can produce the best result. Using another method will work best when the finger moves outside the video in some frames.</p>
+
+<p>In the process of comparing the RGB color values of current pixels and the target color. Searching for exactly the same color is unpractical. The color of the same spot will change due to the light or the condition of the camera in each frame. The program uses threshold to set a range of accepted colors. For instance, if the user set the threshold as 20, and the target color is (100, 100, 100), the program will accept any pixel with color value between (80, 80, 80) and (120, 120, 120). If the threshold is too large, the position may not be accurate; while if it's too small, the possibility of "position can not be found" will rise. The users can set different thresholds for different videos.</p>
+
+<p>There is an algorithm to save the tracking time. At first, the program only searches the pixels around the last position. The range covers +- 10% of total frame size. For instance, the frame size is 100*100 and the last position is (20, 50), the program will search in the rectangle between (10, 40) and (30, 60) (shown below). If in the range, the position can not be found, the program will search the whole frame. If it's still the same, the program will return the position as (-1, -1).</p>
+
+<p><img border="0" src="pics/10percent.jpg" width="291" height="264"></p>
+
+<p><span style="background-color: #ffffff;">Notice, the program only tracks the frame which the user used to the last frame in the video. That is, if an user uses frame 10 to assign which fingers to track, the program only search for frame 10 to the last one. </span></p>
+
+<p><span style="text-decoration: underline; font-weight:400">XML File</span></p>
+
+<p>Once the processing of one frame is over, the program will write one line of data for each tracked finger into the result xml file. The format of the xml file is like below. In the root element, the StartDateTime is the time when the processing begins. Each element "event" contains the position of one finger in the frame. It has four attributes: FingerID, time, and x-y dimensions. The time means the time delay in ms of each frame.</p>
+
+<p style="padding-left: 30px;">&lt;?xml version=<em>"1.0"</em> encoding=<em>"UTF-8"</em>?&gt;</p>
+
+<p style="padding-left: 30px;">&lt;coordStream <a href="/wiki/show/atmrVisTeam/StartDateTime" title="StartDateTime">StartDateTime</a>=<em>"2009-05-25T10:24:10.953-0700"</em>&gt;</p>
+
+<p style="padding-left: 30px;">&nbsp; &lt;event fingerID=<em>"1"</em> time=<em>"142.857"</em> X=<em>"521"</em> Y=<em>"289"</em> /&gt;</p>
+
+<p style="padding-left: 30px;">&nbsp; &lt;event fingerID=<em>"6"</em> time=<em>"142.857"</em> X=<em>"519"</em> Y=<em>"225"</em> /&gt;</p>
+
+<p style="padding-left: 30px;">&nbsp;&nbsp; ...</p>
+
+<p style="padding-left: 30px;">&nbsp;&lt;/coordStream&gt;</p>
+
+<p>&nbsp;Notice that only one xml will be saved for one video processed. If the user processes one video for multiple times, only the latest result will can be found.&nbsp; If the user processed two different videos with same name, the result of the earlier processing will be overwritten.</p>
+
+<p><strong></strong></p>
+
+<p><strong>Directory Structure</strong></p>
+
+<p>Inside the project root folder are folders and files:</p>
+
+<p>Folders:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<ul type="disc">
+<li>data: folder for result XML file. </li>
+<li>docs: User manual and technical documentation. </li>
+<li>lib: Library jar files, including jdom.jar for XML Writer and ij.jar for AVI Reader and image processer. </li>
+<li>res: Resourcre folder. All testing videos are located in its subfolder "videos" </li>
+<li>src: Java source code of the runtime component: 
+<ul type="circle">
+<li><a href="/wiki/show/atmrVisTeam/ImageProcessing" title="ImageProcessing">ImageProcessing</a>: all source code of Finger Tracker; </li>
+<li><a href="/wiki/show/atmrVisTeam/MainUI" title="MainUI">MainUI</a>: all source code of main control&nbsp;and information window, including main class; </li>
+<li><a href="/wiki/show/atmrVisTeam/TrackingWindow" title="TrackingWindow">TrackingWindow</a>: all source code of video display and tracking window </li>
+<li>XML: xml writer's code. </li>
+</ul>
+</li>
+</ul>
+
+<p>Files:</p>
+
+<ul type="disc">
+<li>README.txt: Read me first! </li>
+<li><a href="/wiki/show/atmrVisTeam/FingerTracker" title="FingerTracker">FingerTracker</a>.jar: Executable file for MAC and Windows. </li>
+</ul>
+
+<p><strong>&nbsp;</strong></p>
+
+<p><strong>Building the Project </strong></p>
+
+<p>Notice that JRE 1.6 or higher is needed. Find JRE at <a href="http://java.sun.com/javase/downloads/index.jsp">http://java.sun.com/javase/downloads/index.jsp</a>. To set up this project, we need Eclipse. You can download Eclipse for free from <a href="http://www.eclipse.org/">www.eclipse.org</a><a href="http://www.eclipse.org/">.</a> The detailed instruction is listed below:</p>
+
+<ol type="1">
+<li>Unzip <a href="/wiki/show/atmrVisTeam/FingerTracker_v0" title="FingerTracker_v0">FingerTracker_v0</a>.2.zip; </li>
+<li>Open Eclipse, select: File -&gt; New -&gt; Java Project; </li>
+<li>Call the new project <a href="/wiki/show/atmrVisTeam/FingerTracker" title="FingerTracker">FingerTracker</a>. And hit Next; </li>
+<li>From the Package Explorer, right click on <a href="/wiki/show/atmrVisTeam/FingerTracker" title="FingerTracker">FingerTracker</a> and select Import; </li>
+<li>From the Import Window, select: General -&gt; File System and then hit Next; </li>
+<li>In "From Directory:" click browse and find the unzipped <a href="/wiki/show/atmrVisTeam/FingerTracker" title="FingerTracker">FingerTracker</a> folder then hit Finish; </li>
+<li>In the pop up hit "Yes To All". </li>
+<li>From <a href="/wiki/show/atmrVisTeam/FingerTracker" title="FingerTracker">FingerTracker</a> in the Package Explorer, select: src -&gt; UI, and then right click on <a href="/wiki/show/atmrVisTeam/RunFingerTracker" title="RunFingerTracker">RunFingerTracker</a>.java. Finally Select: Run As -&gt; Java Application&nbsp; </li>
+</ol>
+
+<p>&nbsp;</p>
+
+	</div>
+
+</div>
+</body>
+</html>
